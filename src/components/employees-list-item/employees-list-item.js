@@ -22,7 +22,7 @@ class EmployeesListItem extends Component {
     }
 
     render() {
-        const { name, salary, onDelete } = this.props;
+        const { salary, onDelete } = this.props;
         const { increase } = this.state;
         const { like } = this.state;
 
@@ -37,7 +37,7 @@ class EmployeesListItem extends Component {
 
         return (
             <li className={classNames}>
-                <span className="list-group-item-label" onClick={this.likePerson}>{name}</span>
+                <span className="list-group-item-label" onClick={this.likePerson}>{this.props.name}</span>
                 <input type="text" className="list-group-item-input" defaultValue={salary + '$'} />
                 <div className='d-flex justify-content-center align-items-center'>
                     <button type="button"
