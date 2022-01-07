@@ -8,12 +8,13 @@ const EmployeesListItem = (props) => {
     if (increase) {
         classNames += ' increase';
     }
+
     if (rise) {
         classNames += ' like'
     }
 
     return (
-        <li className={classNames}>s
+        <li className={classNames}>
             <span className="list-group-item-label" onClick={onToggleProp} data-toggle="rise">{name}</span>
             <input type="text" className="list-group-item-input" defaultValue={salary + '$'} />
             <div className='d-flex justify-content-center align-items-center'>
